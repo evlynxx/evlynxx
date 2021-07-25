@@ -3,8 +3,8 @@
 - 🌱 I’m currently learning Python, SQL and Tableau
 - 💞️ I’m looking for a Data Analyst position
 - 📫 How to reach me:
-	gmail: chau.luu.minh.161199@gmail.com
-	linkedIn: linkedin.com/in/evelyn1611/
+	<br/>gmail: chau.luu.minh.161199@gmail.com
+	<br/>linkedIn: linkedin.com/in/evelyn1611/
 
 <!---
 evlynxx/evlynxx is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
