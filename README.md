@@ -1,10 +1,9 @@
 - 👋 Hi, I’m @evlynxx
-- 👀 I’m interested in Data Analysis and Data Visualization
-- 🌱 I’m currently learning Python, SQL and Tableau
-- 💞️ I’m looking for a Data Analyst position
+- 👀 I’m interested in *Data Analysis* and *Data Visualization*
+- 🌱 I’m currently learning **Python, SQL and Tableau**
 - 📫 How to reach me:
-	<br/>gmail: chau.luu.minh.161199@gmail.com
-	<br/>linkedIn: linkedin.com/in/evelyn1611/
+	<br/><\t>**Gmail**: chau.luu.minh.161199@gmail.com
+	<br/><\t>**LinkedIn**: linkedin.com/in/evelyn1611/
 
 <!---
 evlynxx/evlynxx is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
