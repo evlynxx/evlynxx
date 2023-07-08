@@ -1,5 +1,5 @@
 ------------------------------------------------------------------------
--- Create temp Tieu Hao raw
+-- Tạo bảng "Tiêu Hao raw"
 ------------------------------------------------------------------------
 IF OBJECT_ID('tempdb..#tieuhao_raw') IS NOT NULL
     DROP TABLE tempdb..#tieuhao_raw
@@ -24,7 +24,7 @@ FROM ODS.dbo.FACT_BANGKETIEUHAO_MES
 WHERE cd like N'%Nghiền liệu%'
 
 ------------------------------------------------------------------------
--- Create temp Nhap Ve raw
+-- Tạo bảng "Nhập Về raw"
 ------------------------------------------------------------------------
 IF OBJECT_ID('tempdb..#nhapve_raw') IS NOT NULL
     DROP TABLE tempdb..#nhapve_raw
@@ -48,7 +48,7 @@ INTO #nhapve_raw
 FROM ODS.dbo.FACT_BANGKENHAPTHANHPHAM_MES
 
 ------------------------------------------------------------------------
--- Create temp Tieu Hao processed
+-- Tạo bảng "Tiêu Hao processed"
 ------------------------------------------------------------------------
 IF OBJECT_ID('tempdb..#tieuhao_processed') IS NOT NULL
     DROP TABLE tempdb..#tieuhao_processed
@@ -73,7 +73,7 @@ FROM #tieuhao_raw
 GROUP BY bang_goc , so_phieu , lsx , sp , x_product_code , cd , ngay , ten_hang , ma_nhom , ma_hang , dvt , kho , pham_cap , tt
 
 ------------------------------------------------------------------------
--- Create temp Nhap Ve processed
+-- Tạo bảng "Nhập Về processed"
 ------------------------------------------------------------------------
 IF OBJECT_ID('tempdb..#nhapve_processed') IS NOT NULL
     DROP TABLE tempdb..#nhapve_processed
@@ -98,7 +98,7 @@ FROM #nhapve_raw
 GROUP BY bang_goc , so_phieu , lsx , sp , x_product_code , cd , ngay , ten_hang , ma_nhom , ma_hang , dvt , kho , pham_cap , tt
 
 ------------------------------------------------------------------------
--- Create BaoCaoSXHangNgay view
+-- Tạo bảng "SX_Daily_1"
 ------------------------------------------------------------------------
 IF OBJECT_ID('tempdb..#union_all') IS NOT NULL
     DROP TABLE tempdb..#union_all;
