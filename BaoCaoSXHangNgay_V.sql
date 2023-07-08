@@ -100,9 +100,12 @@ GROUP BY bang_goc , so_phieu , lsx , sp , x_product_code , cd , ngay , ten_hang 
 ------------------------------------------------------------------------
 -- Create BaoCaoSXHangNgay view
 ------------------------------------------------------------------------
-IF OBJECT_ID('ODS.dbo.BaoCaoSXHangNgay_V') IS NOT NULL
-    DROP VIEW dbo.BaoCaoSXHangNgay_V
-SELECT *
-INTO ODS.dbo.BaoCaoSXHangNgay_V
-FROM (SELECT * FROM tempdb..#tieuhao_processed UNION ALL
-      SELECT * FROM tempdb..#nhapve_processed)
+IF OBJECT_ID('tempdb..#union_all') IS NOT NULL
+    DROP TABLE tempdb..#union_all;
+WITH X AS (
+    SELECT * FROM #tieuhao_processed UNION ALL SELECT * FROM #nhapve_processed
+)
+
+SELECT * 
+INTO ODS.dbo.SX_Daily_1
+FROM X
