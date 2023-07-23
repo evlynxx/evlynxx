@@ -11,6 +11,7 @@ SELECT
     x_product_code ,
     cd ,
     ngay ,
+    ca ,
     ten_hang ,
     ma_nhom ,
     ma_hang ,
@@ -38,6 +39,7 @@ SELECT
     x_product_code ,
     cd ,
     ngay ,
+    ca ,
     ten_hang ,
     ma_nhom ,
     ma_hang ,
@@ -64,6 +66,7 @@ SELECT
 	x_product_code ,
 	cd ,
 	ngay ,
+    ca ,
 	ten_hang ,
 	ma_nhom ,
 	ma_hang ,
@@ -76,7 +79,7 @@ SELECT
 	ROUND(SUM(sl_tt),2) sl_kh
 INTO #tieuhao_processed
 FROM #tieuhao_raw
-GROUP BY bang_goc , so_phieu , lsx , sp , x_product_code , cd , ngay , ten_hang , ma_nhom , ma_hang , nhom_sp , dvt , kho , pham_cap , tt
+GROUP BY bang_goc , so_phieu , lsx , sp , x_product_code , cd , ngay , ca , ten_hang , ma_nhom , ma_hang , nhom_sp , dvt , kho , pham_cap , tt
 
 ------------------------------------------------------------------------
 -- Tạo bảng "Nhập Về processed"
@@ -91,6 +94,7 @@ SELECT
 	x_product_code ,
 	cd ,
 	ngay ,
+    ca ,
 	ten_hang ,
 	ma_nhom ,
 	ma_hang ,
@@ -103,7 +107,7 @@ SELECT
 	ROUND(SUM(sl_sx),2) sl_kh
 INTO #nhapve_processed
 FROM #nhapve_raw
-GROUP BY bang_goc , so_phieu , lsx , sp , x_product_code , cd , ngay , ten_hang , ma_nhom , ma_hang , nhom_sp , dvt , kho , pham_cap , tt
+GROUP BY bang_goc , so_phieu , lsx , sp , x_product_code , cd , ngay , ca , ten_hang , ma_nhom , ma_hang , nhom_sp , dvt , kho , pham_cap , tt
 
 ------------------------------------------------------------------------
 -- Tạo bảng "SX_Daily_1"
